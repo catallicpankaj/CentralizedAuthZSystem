@@ -65,7 +65,7 @@ public class AuthZServiceImpl implements AuthZService {
 			List<Permissions> listOfPermissions = objectMapper.readValue(permissions,
 					objectMapper.getTypeFactory().constructCollectionType(List.class, Permissions.class));
 			listOfPermissions.forEach(resource -> {
-				resourceIdToResourceMap.put(resource.getResourceId(), resource.getResource());
+				//resourceIdToResourceMap.put(resource.getResourceId(), resource.getResource());
 			});
 		}
 	}

@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "40217c57-c282-4c6f-a7ec-bb7f944956e3",
+		"name": "Centralized-AuthZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "business-units",
+			"item": [
+				{
+					"name": "GetAll-BU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/business-unit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"business-unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add-BU",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"buId\": \"008017\",\n    \"buName\":\"Fidelity\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/business-unit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"business-unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-BU",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/business-unit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"business-unit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-BU",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"buName\":\"Fidelity's\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/business-unit/008017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"business-unit",
+								"008017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID- BU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/business-unit/008017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"business-unit",
+								"008017"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "permissions",
+			"item": [
+				{
+					"name": "Add-Permissions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"permissionId\":\"1111\",\n    \"canCreate\":true,\n    \"canRead\":true,\n    \"canUpdate\":true,\n    \"canDelete\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/digital-auth/central-authz/v1/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resources",
+			"item": [
+				{
+					"name": "Add-Resources",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/digital-auth/central-authz/v1/resources",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"resources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-AllResources",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PrincipalResources-Mapping",
+			"item": [
+				{
+					"name": "Add-PrincipalResourcesMapping",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"123\",\n    \"principalId\":\"pxsha11\",\n    \"resourcesId\":\"101\",\n    \"permissionId\":\"0100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/digital-auth/central-authz/v1/principal-resource-mapping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"principal-resource-mapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-PrincipalResourceMappingByID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
