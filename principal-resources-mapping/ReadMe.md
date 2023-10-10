@@ -1,0 +1,3 @@
+DB Query
+--------
+SELECT ID , PRINCIPAL_ID , RESOURCES_ID , PERMISSION_ID , CREATED_DATE , LAST_MODIFIED_DATE  FROM "principalresources-mapping"

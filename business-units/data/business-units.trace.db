@@ -1,0 +1,5 @@
+2023-10-09 17:10:32 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BUSINESSUNIT" not found (this database is empty); SQL statement:
+select * from businessUnit [42104-214]
+2023-10-09 17:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
