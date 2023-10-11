@@ -2,6 +2,7 @@ package com.pankaj.cas.permission.service;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
@@ -22,6 +23,11 @@ public class PermissionsServiceImpl implements PermissionsService {
 		permissions.setCreatedDate(Timestamp.from(Instant.now()));
 		permissions.setLastModifiedDate(Timestamp.from(Instant.now()));
 		return permissionRepository.save(permissions);
+	}
+	
+	@Override
+	public List<Permissions> getAllPermissions() {
+		return permissionRepository.findAll();
 	}
 
 	@Override
@@ -45,5 +51,7 @@ public class PermissionsServiceImpl implements PermissionsService {
 		permissionRepository.deleteById(permissionId);
 		
 	}
+
+	
 
 }

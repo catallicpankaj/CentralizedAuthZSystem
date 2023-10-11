@@ -1,5 +1,7 @@
 package com.pankaj.cas.permission.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +30,12 @@ public class PermissionsController {
 		return new ResponseEntity<>(createdPermission, HttpStatus.CREATED);
 	}
 
+	@GetMapping
+	public ResponseEntity<List<Permissions>> getAllResources() {
+		List<Permissions> resource = permissionsService.getAllPermissions();
+		return new ResponseEntity<>(resource, HttpStatus.OK);
+	}
+	
 	@GetMapping("{id}")
 	public ResponseEntity<Permissions> getPermissionById(@PathVariable("id") String permissionId) {
 		Permissions permissions = permissionsService.getPermissionById(permissionId);

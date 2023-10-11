@@ -159,12 +159,34 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/digital-auth/central-authz/v1/permissions",
+							"raw": "http://localhost:8083/digital-auth/central-authz/v1/permissions",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8083",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET- ALL Permissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/digital-auth/central-authz/v1/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
 							"path": [
 								"digital-auth",
 								"central-authz",
@@ -187,7 +209,12 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \n}"
+							"raw": "{\n    \"resourceId\":\"104\",\n    \"resource\":\"/profile/statement/quarterly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "http://localhost:8085/digital-auth/central-authz/v1/resources",
@@ -210,7 +237,21 @@
 					"name": "Get-AllResources",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/digital-auth/central-authz/v1/resources",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"resources"
+							]
+						}
 					},
 					"response": []
 				}
@@ -226,7 +267,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":\"123\",\n    \"principalId\":\"pxsha11\",\n    \"resourcesId\":\"101\",\n    \"permissionId\":\"0100\"\n}",
+							"raw": "{\n    \"id\":\"126\",\n    \"principalId\":\"pxsha11\",\n    \"resourcesId\":\"104\",\n    \"permissionId\":\"0100\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -254,7 +295,81 @@
 					"name": "Get-PrincipalResourceMappingByID",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/digital-auth/central-authz/v1/principal-resource-mapping/pxsha11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"principal-resource-mapping",
+								"pxsha11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experience - API",
+			"item": [
+				{
+					"name": "GET-Resources by PrincipalID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/digital-auth/central-authz/v1/authz/business-unit/8017/principal/pxsha11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"authz",
+								"business-unit",
+								"8017",
+								"principal",
+								"pxsha11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Resources for principal by ResourceID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/digital-auth/central-authz/v1/authz/business-unit/8017/principal/pxsha11/resource/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"digital-auth",
+								"central-authz",
+								"v1",
+								"authz",
+								"business-unit",
+								"8017",
+								"principal",
+								"pxsha11",
+								"resource",
+								"102"
+							]
+						}
 					},
 					"response": []
 				}

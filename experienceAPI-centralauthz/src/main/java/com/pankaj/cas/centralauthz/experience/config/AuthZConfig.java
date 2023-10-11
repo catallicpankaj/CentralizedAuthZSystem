@@ -1,4 +1,4 @@
-package com.pankaj.cas.centralauthz.config;
+package com.pankaj.cas.centralauthz.experience.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

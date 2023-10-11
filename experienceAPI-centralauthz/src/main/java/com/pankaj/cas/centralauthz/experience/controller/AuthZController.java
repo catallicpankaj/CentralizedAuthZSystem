@@ -12,7 +12,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.pankaj.cas.centralauthz.experience.service.AuthZService;
 import com.pankaj.cas.centralauthz.experience.service.model.PrincipalResourceDTO;
-import com.pankaj.cas.centralauthz.experience.service.model.PrincipalResourceMapping;
 
 @RestController
 @RequestMapping("/v1/authz")
